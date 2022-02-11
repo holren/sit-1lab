@@ -8,5 +8,10 @@ const requestListener = function (req, res) {
 			res.writeHead(200);
 			res.end(contents);
 		}
+		.catch(err => {
+			res.writeHead(500);
+			res.end(err);
+			return;
+		}
 	)
 };
